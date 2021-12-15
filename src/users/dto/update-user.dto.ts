@@ -1,18 +1,21 @@
 import {ApiProperty} from "@nestjs/swagger";
 
-export class CreateUserDto{
+export class UpdateUserDto {
+    @ApiProperty({example: '1', description: 'ID of a user'})
+    id:number
+
     @ApiProperty({example: 'email', description: 'Email of a user'})
-    readonly email: string
+    email: string
 
     @ApiProperty({example: '********', description: 'Password of a user'})
-    readonly password: string
+    password: string
 
     @ApiProperty({example: 'densmith', description: 'Username of a user'})
-    readonly username: string
+    username: string
 
     @ApiProperty({example: 'img link', description: 'Image of a user'})
-    readonly img: string
+    img: string
 
     @ApiProperty({example: 'Bishkek', description: 'City of a user'})
-    readonly city: string
+    city: string
 }
