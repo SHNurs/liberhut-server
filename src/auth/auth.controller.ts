@@ -12,14 +12,14 @@ export class AuthController {
 
     @ApiOperation({summary: 'Login'})
     @ApiResponse({status: 200, type: 'token'})
-    @Post('login')
+    @Post('/login')
     login(@Body() dto: LoginUserDto){
         return this.authService.login(dto)
     }
 
     @ApiOperation({summary: 'Registration'})
     @ApiResponse({status: 200, type: 'token'})
-    @Post('registration')
+    @Post('/registration')
     registration(@Body() dto: CreateUserDto){
         return this.authService.registration(dto)
     }
